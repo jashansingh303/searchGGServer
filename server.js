@@ -20,6 +20,10 @@ function getPlayerPUUID(playerName){
 
 API_KEY = "RGAPI-2544438f-2b80-4646-adf9-1d23aab0273a"
 
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
+
 app.get("/past5Games", async (req,res)=>{
     const playerName = req.query.username
     const PUUID = await getPlayerPUUID(playerName)
